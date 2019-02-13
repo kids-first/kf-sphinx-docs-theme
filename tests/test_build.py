@@ -5,10 +5,7 @@ import pytest
 from sphinx import addnodes
 
 from util import build
-from conftest import (
-    SPHINX_BUILDER_NAMES,
-    KIDSFIRST_CSS_FILE
-)
+from conftest import SPHINX_BUILDER_NAMES
 
 
 @pytest.mark.parametrize('builder_name',
@@ -16,7 +13,7 @@ from conftest import (
                          )
 def test(builder_name, data_dir, tmpdir):
     src_dir = os.path.join(data_dir, 'basic', 'source')
-    dest_dir = tmpdir.mkdir('build')
+    dest_dir = os.path.join(data_dir, 'basic', 'build')
 
     # Build worked
     app, status, warning = build(src_dir, dest_dir)
@@ -27,11 +24,11 @@ def test(builder_name, data_dir, tmpdir):
     with open(os.path.join(app.outdir, 'index.html')) as index_file:
         content = index_file.read()
 
-    # Kids First css file exists
-    assert os.path.isfile(os.path.join(dest_dir,
-                                       '_static', 'css', KIDSFIRST_CSS_FILE))
     # Kids First css is referenced
     kf_css_element = (
         '<link rel="stylesheet" href="https://kids-first.github.io/'
-        'kf-sphinx-docs-theme/static/css/kidsfirst.css" type="text/css" />')
+        'kf-sphinx-docs-theme/sphinx_kidsfirst_theme/static/css/'
+        'kidsfirst.css" type="text/css" />'
+    )
+
     assert kf_css_element in content
