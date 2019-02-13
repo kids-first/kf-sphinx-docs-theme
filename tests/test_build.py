@@ -31,5 +31,7 @@ def test(builder_name, data_dir, tmpdir):
     assert os.path.isfile(os.path.join(dest_dir,
                                        '_static', 'css', KIDSFIRST_CSS_FILE))
     # Kids First css is referenced
-    assert ('<link rel="stylesheet" '
-            'href="_static/css/kidsfirst.css" type="text/css" />') in content
+    kf_css_element = (
+        '<link rel="stylesheet" href="https://kids-first.github.io/'
+        'kf-sphinx-docs-theme/static/css/kidsfirst.css" type="text/css" />')
+    assert kf_css_element in content
