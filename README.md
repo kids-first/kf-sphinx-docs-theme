@@ -1,4 +1,13 @@
-# Kids First Sphinx Docs Theme
+<p align="center">
+  <img src="docs/images/logo.png">
+</p>
+<p align="center">
+  <a href="https://github.com/kids-first/kf-sphinx-docs-theme/blob/master/LICENSE"><img src="https://img.shields.io/github/license/kids-first/kf-sphinx-docs-theme.svg?style=for-the-badge"></a>
+  <a href="https://circleci.com/gh/kids-first/kf-sphinx-docs-theme"><img src="https://img.shields.io/circleci/project/github/kids-first/kf-sphinx-docs-theme.svg?style=for-the-badge"></a>
+</p>
+
+Kids First Sphinx Docs Theme
+=============================
 
 A Sphinx theme that inherits the Sphinx Read the Docs theme https://github.com/rtfd/sphinx_rtd_theme and adds Kids First styling on top of it.
 
