@@ -1,4 +1,9 @@
 
+.wy-nav-top {
+    background: #343434;
+    border-bottom: #a6278f solid 8px;
+}
+
 .wy-side-nav-search {
     background: #f4f5f8;
     color: #343434;
