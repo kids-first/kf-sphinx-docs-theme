@@ -16,6 +16,7 @@ setup(
     packages=['sphinx_kidsfirst_theme'],
     package_data={'sphinx_kidsfirst_theme': [
         'theme.conf',
+        'layout.html',
         'static/css/*.css'
     ]},
     include_package_data=True,
